@@ -12,10 +12,14 @@
   <script type="text/javascript" src="{{ asset('bower/jquery/dist/jquery.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('bower/jquery-ui/jquery-ui.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('bower/main.js') }}"></script>
+  <style>
+    #sortable{
+      cursor:move;
+    }
+  </style>
 </head>
 <body class="container">
   <div id="content">
-
     @if (Session::has('message'))
     <div class="flash alert alert-success">
       <p>{{ Session::get('message') }}</p>

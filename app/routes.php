@@ -23,7 +23,7 @@ Route::bind('topics', function($value, $route) {
 
 Route::get('/', 'TopicsController@index');
 
-Route::post('topics/{slug}/changeTaskOrder', 'TasksController@changeTaskOrder');
+Route::post('topics/changeTaskOrder', 'TasksController@changeTaskOrder');
 
 
 

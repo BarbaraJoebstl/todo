@@ -1,6 +1,6 @@
 
 
-<ul>
+<ul style="list-style:none">
   <li>
     {{ Form::label('name', 'Name') }}
     {{ Form::text('name') }}

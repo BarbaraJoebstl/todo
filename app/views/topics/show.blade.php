@@ -12,12 +12,13 @@
   @if ( !$topic->tasks->count() )
   <p class="alert alert-info">You have no tasks for {{ $topic->name }}</p>
   @else
-  <ul id="sortable" class="sortable list-group" style="cursor:move;">
+  <ul id="sortable" class="sortable list-group">
     @foreach( $topic->tasks as $task )
     <li class="list-group-item clearfix" data-id="{{ $task->id }}">
-      <a href="{{ route('topics.tasks.show', [$topic->slug, $task->slug]) }}">{{ $task->name }}</a>
+    {{ $task->name }}
       <div class="pull-right">
-        {{ Form::open(array('class' => 'inline', 'method' => 'DELETE', 'route' => array('topics.tasks.destroy', $topic->slug, $task->slug))) }}
+        {{ Form::open(array('class' => 'inline', 'method' => 'DELETE',
+        'route' => array('topics.tasks.destroy', $topic->slug, $task->slug))) }}
         {{ Form::submit('Delete', array('class' => 'btn btn-danger')) }}
         {{ Form::close() }}
       </div>
