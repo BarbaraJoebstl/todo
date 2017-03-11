@@ -1,4 +1,4 @@
-# Training App
+# Todo App
 
-This is a basic TODO app build with [Laravel](https://laravel.com/)
+This is a simple todo app build with [Laravel](https://laravel.com/)
 
